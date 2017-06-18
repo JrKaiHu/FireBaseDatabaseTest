@@ -35,13 +35,12 @@ public class MainActivity extends AppCompatActivity {
                 adapter.clear();
                 for ( DataSnapshot ds : dataSnapshot.getChildren() ) {
 
-                    //Profile profile = ds.getValue(Profile.class);
-                    //String name = ds.child("name").getValue().toString();
-                    //arrayList.add(ds.getValue(Profile.class));
+                    Profile profile = ds.getValue(Profile.class);
+                    arrayList.add(ds.getValue(Profile.class));
 
-                    adapter.add(ds.child("name").getValue().toString());
-                    adapter.add(ds.child("addr").getValue().toString());
-                    adapter.add(ds.child("phone").getValue().toString());
+                    adapter.add(profile.getName());
+                    adapter.add(profile.getAddr());
+                    adapter.add(profile.getPhone());
                 }
             }
 

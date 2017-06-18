@@ -6,9 +6,6 @@ class Profile {
     private String name;
     private String phone;
 
-    // Default constructor required for calls to
-    // DataSnapshot.getValue(User.class)
-
     public Profile() {
         // Default constructor required for calls to DataSnapshot.getValue(Post.class)
     }
